@@ -903,9 +903,9 @@ footer {
       color: #CB6A79; }
 
 #landing {
-  background: url("../images/landing_hero.png") no-repeat;
-  background-size: cover;
-  background-position: center top;
+  // background: url("../images/landing_hero.png") no-repeat;
+  // background-size: cover;
+  // background-position: center top;
   color: #fff; }
   #landing h2 {
     font-size: 2.75em;
@@ -967,6 +967,11 @@ footer {
     #landing header nav a, #global-nav header nav a {
       color: #fff;
       font-size: 1.25em; }
+#community {
+  background: #FFF;
+  background-size: cover;
+  background-position: center top;
+}
 
 #community h2 {
   color: #233F71;
@@ -1031,7 +1036,10 @@ footer {
     width: 20em; }
 
 #faq {
-  margin: 5em auto 2em;
+  background: #FFF;
+  background-size: cover;
+  background-position: center top;
+  margin: 6em auto 2em;
   min-height: auto;
   width: 60%; }
   #faq h2 {
@@ -1116,7 +1124,7 @@ footer {
   background: url("../images/summit_hero.png") no-repeat;
   background-size: cover;
   color: #fff;
-  margin-bottom: -5em;
+  margin-bottom: -10em;
   padding: 5em 0 6em; }
   #summit h2 {
     color: #fff; }
@@ -1250,3 +1258,14 @@ footer {
     position: absolute;
     top: 0;
     right: 1.5em; } }
+    #video-background {
+    /*  making the video fullscreen  */
+      position: fixed;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto; 
+      height: auto;
+      z-index: -100;
+    }

@@ -15,4 +15,15 @@ $(function() {
       }
     }
   });
+
+  $('.slider-testimonials').owlCarousel({
+    stopOnHover:     !0,
+    singleItem:      !0,
+    autoHeight:      !0,
+    slideSpeed:      400,
+    paginationSpeed: 1000,
+    goToFirstSpeed:  2000,
+    autoPlay:        3000,
+    navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+  });
 });
