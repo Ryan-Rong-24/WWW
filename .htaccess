@@ -1,0 +1,8 @@
+AuthType WebAuth
+<Files eweekapp.html>
+Require valid-user
+</Files>
+
+# Redirect ases.stanford.edu/summit/apply to our typeform
+# TODO: remember to change next year
+Redirect 301 /summit/apply https://asessummit2017.typeform.com/to/HXLb1k
