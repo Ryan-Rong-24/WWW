@@ -969,7 +969,10 @@ footer {
     #landing header nav a, #global-nav header nav a {
       color: #fff;
       font-size: 1.25em; }
+
 #community {
+  display: block;
+  margin-bottom: -100px;
   background: #FFF;
   background-size: cover;
   background-position: center top;
@@ -1275,3 +1278,131 @@ footer {
     #landing {
       background-color: rgba(0, 0, 0, 0.3);
     }
+
+    #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+/* Mute/Unmute, Speaker CSS Styling */
+.speaker-container {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 120px;
+}
+.speaker {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+}
+.speaker span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: 11px 0 0 2px;
+}
+.speaker span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  border-width: 10px 14px 10px 15px;
+  left: -13px;
+  top: 5px;
+}
+.speaker span:before {
+  transform: rotate(45deg);
+  border-radius: 0 50px 0 0;
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-style: double;
+  border-color: #fff;
+  border-width: 7px 7px 0 0;
+  left: 18px;
+  top: 9px;
+  transition: all 0.2s ease-out;
+}
+.speaker:hover span:before {
+  transform: scale(0.8) translate(-3px, 0) rotate(42deg);
+}
+.speaker.mute span:before {
+  transform: scale(0.5) translate(-15px, 0) rotate(36deg);
+  opacity: 0;
+}
+
+/* Testimonials Styling */
+article {
+  margin: 50px auto;
+  width: 60%;
+  padding: 1em;
+  font-size: 1em;
+  color:#FFF;
+}
+
+.quote {
+  background: #CB6A79;
+  padding: 15px 20px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.quote:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 18px 0 18px;
+  border-color: #CB6A79 transparent transparent transparent;
+  position: relative;
+  top: 37px;
+  left: 50px;
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 80px;
+}
+
+.student .photo {
+  background-color: #ccc;
+  border-radius: 100px;
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 25px;
+}
+
+.student p {
+  position: relative;
+  top: 30px;
+  color: #CB6A79;
+  text-transform: uppercase;
+}
+
+.student p:nth-child(2) {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.student p:nth-child(3) {
+  font-size: 14px;
+  color: #777;
+}
+
+.photo img {
+  height: 120px;
+  width: 120px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
