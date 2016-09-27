@@ -1341,7 +1341,7 @@ footer {
 }
 
 /* Testimonials Styling */
-article {
+article#owl-article {
   margin: 50px auto;
   width: 60%;
   padding: 1em;
