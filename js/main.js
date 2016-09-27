@@ -53,7 +53,7 @@ $(function() {
   $("#owl").owlCarousel({
       navigation: false,
       slideSpeed: 100,
-      paginationSpeed: 800,
+      paginationSpeed: 2000,
       singleItem: true,
       autoPlay: true
   });
