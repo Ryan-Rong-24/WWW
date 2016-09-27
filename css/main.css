@@ -1044,9 +1044,9 @@ footer {
   background: #FFF;
   background-size: cover;
   background-position: center top;
-  margin: 6em auto 2em;
   min-height: auto;
-  width: 60%; }
+  padding-left: 20%;
+  padding-right: 20% }
   #faq h2 {
     color: #233F71; }
   #faq article {
