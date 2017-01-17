@@ -6,3 +6,6 @@ Require valid-user
 # Redirect ases.stanford.edu/summit/apply to our typeform
 # TODO: remember to change next year
 Redirect 301 /summit/apply https://asessummit2017.typeform.com/to/HXLb1k
+# Redirect ases.stanford.edu/apply to our typeform
+# TODO: remember to change next year
+# Redirect 301 /apply https://ases-stanford.typeform.com/to/BQtDNy
