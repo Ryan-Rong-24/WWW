@@ -939,18 +939,18 @@ footer {
     #landing form :-ms-input-placeholder {
       color: #fff; }
 
-#landing header, #global-nav header {
+#landing header, #global-nav header, .top header {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0 5% 0 10%;
   width: 85%; }
-  #landing header .hamburger, #global-nav header .hamburger {
+  #landing header .hamburger, #global-nav header .hamburger, .top header .hamburger{
     padding-top: 1em; }
-    #landing header .hamburger img, #global-nav header .hamburger img {
+    #landing header .hamburger img, #global-nav header .hamburger img, .top header .hamburger img{
       height: 2em;
       display: block; }
-  #landing header .logo, #global-nav header .logo {
+  #landing header .logo, #global-nav header .logo, .top header .logo {
     color: #fff;
     font-weight: 600;
     font-size: 2em;
@@ -960,13 +960,13 @@ footer {
     background-size: contain;
     background-position: left center;
     text-align: left; }
-  #landing header nav, #global-nav header nav {
+  #landing header nav, #global-nav header nav, .top header nav {
     position: absolute;
     top: 0;
     right: 0; }
-    #landing header nav li, #global-nav header nav li {
+    #landing header nav li, #global-nav header nav li, .top header nav li{
       vertical-align: middle; }
-    #landing header nav a, #global-nav header nav a {
+    #landing header nav a, #global-nav header nav a, .top header nav a {
       color: #fff;
       font-size: 1.25em; }
 
@@ -1214,9 +1214,9 @@ footer {
 @media screen and (max-width: 875px) {
   .desktop {
     display: none !important; }
-  #landing header nav li a:not(.hamburger) {
+  #landing header nav li a:not(.hamburger), .top header nav li a:not(.hamburger) {
     display: none; }
-  #landing header .hamburger {
+  #landing header .hamburger, .top header .hamburger {
     margin-top: 0;
     display: block; }
   #global-nav header .hamburger {
@@ -1259,7 +1259,7 @@ footer {
     height: 2em; }
   #summit {
     padding: 5em 0 11em; }
-  #landing .hamburger {
+  #landing .hamburger, .top .hamburger {
     position: absolute;
     top: 0;
     right: 1.5em; } }
@@ -1406,3 +1406,47 @@ article#owl-article {
   -webkit-border-radius: 100px;
   border-radius: 100px;
 }
+
+/* Members page */
+#members {
+  color: white;
+  
+}
+
+#members div {
+  vertical-align: top;
+}
+
+#members h2 {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.member {
+  margin: 2rem 1rem;
+  text-align: center;
+  float: left;
+}
+
+.member .img-container {
+  height: 225px;
+  width: 225px;
+  border-radius: 225px;
+
+  overflow: hidden;
+}
+
+.member .img-container img {
+  width: 400px;
+  margin-left: -90px;
+}
+
+.member .info {
+  margin-top: 1rem;
+}
+
+.member .info .name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
