@@ -1410,7 +1410,6 @@ article#owl-article {
 /* Members page */
 #members {
   color: white;
-  
 }
 
 #members div {
@@ -1422,16 +1421,24 @@ article#owl-article {
   text-align: center;
 }
 
+.member-grid {
+  position: relative;
+  justify-content: center;
+}
+
 .member {
-  margin: 2rem 1rem;
-  text-align: center;
+  position: relative;
   float: left;
+  margin: 1rem 0;
+  width: 100%;
 }
 
 .member .img-container {
   height: 225px;
   width: 225px;
-  border-radius: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 112.5px;
 
   overflow: hidden;
 }
@@ -1441,7 +1448,33 @@ article#owl-article {
   margin-left: -90px;
 }
 
+@media screen and (min-width: 580px) {
+  .member {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .member {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .member {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .member {
+    width: 20%;
+  }
+}
+
 .member .info {
+  width: 100%;
+  text-align: center;
   margin-top: 1rem;
 }
 
