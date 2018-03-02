@@ -1169,6 +1169,23 @@ footer {
       margin-top: 2.5em;
       width: 50%; }
 
+#sponsors {
+  min-height: auto;
+  height: auto;
+  background-color: white;
+}
+  #sponsors div {
+    height: auto;
+  }
+  #sponsors h2 {
+    text-align: center; }
+  #sponsors .sponsor-image {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+  }
+
 .activity {
   width: 80%;
   margin: 0 auto; }
