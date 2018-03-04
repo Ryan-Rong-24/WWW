@@ -972,10 +972,11 @@ footer {
 
 #community {
   display: block;
-  margin-bottom: -100px;
-  background: #FFF;
+  background: #0F2046;
   background-size: cover;
   background-position: center top;
+  height: auto;
+  min-height: 10vh;
 }
 
 #community h2 {
@@ -1173,6 +1174,7 @@ footer {
   min-height: auto;
   height: auto;
   background-color: white;
+  padding-bottom: 80px;
 }
   #sponsors div {
     height: auto;
@@ -1402,7 +1404,7 @@ article#owl-article {
 .student p {
   position: relative;
   top: 30px;
-  color: #CB6A79;
+  color: white;
   text-transform: uppercase;
 }
 
