@@ -1506,8 +1506,4 @@ article#owl-article {
   display: none;
 }
 
-.member:hover .info .bio {
-  display: block;
-  font-size: 1rem;
-  font-weight: 300;
-}
+
