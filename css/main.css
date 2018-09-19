@@ -1285,11 +1285,11 @@ footer {
     #video-background {
     /*  making the video fullscreen  */
       position: fixed;
-      right: 0; 
+      right: 0;
       bottom: 0;
-      min-width: 100%; 
+      min-width: 100%;
       min-height: 100%;
-      width: auto; 
+      width: auto;
       height: auto;
       z-index: -100;
     }
@@ -1502,3 +1502,12 @@ article#owl-article {
   font-weight: 600;
 }
 
+.member .info .bio {
+  display: none;
+}
+
+.member:hover .info .bio {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+}
