@@ -1,400 +1,93 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+	<style type="text/css">
+		/* Prevent copy paste for all elements except text fields */
+		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+		input, textarea  { -webkit-user-select:text; }
+		body { background-color:black; color:white }
+        
+	</style>
+	<script src='cordova.js'></script>
+		<script src="libs/jshashtable.js"></script>
+	<script src="gd.js"></script>
+	<script src="gd-splash-image.js"></script>
+	<script src="libs/hshg.js"></script>
+	<script src="libs/rbush.js"></script>
+	<script src="inputmanager.js"></script>
+	<script src="timemanager.js"></script>
+	<script src="runtimeobject.js"></script>
+	<script src="profiler.js"></script>
+	<script src="runtimescene.js"></script>
+	<script src="scenestack.js"></script>
+	<script src="polygon.js"></script>
+	<script src="force.js"></script>
+	<script src="layer.js"></script>
+	<script src="timer.js"></script>
+	<script src="runtimegame.js"></script>
+	<script src="variable.js"></script>
+	<script src="variablescontainer.js"></script>
+	<script src="oncetriggers.js"></script>
+	<script src="runtimebehavior.js"></script>
+	<script src="spriteruntimeobject.js"></script>
+	<script src="events-tools/commontools.js"></script>
+	<script src="events-tools/runtimescenetools.js"></script>
+	<script src="events-tools/inputtools.js"></script>
+	<script src="events-tools/objecttools.js"></script>
+	<script src="events-tools/cameratools.js"></script>
+	<script src="events-tools/soundtools.js"></script>
+	<script src="events-tools/storagetools.js"></script>
+	<script src="events-tools/stringtools.js"></script>
+	<script src="events-tools/windowtools.js"></script>
+	<script src="events-tools/networktools.js"></script>
+	<script src="pixi-renderers/pixi.js"></script>
+	<script src="pixi-renderers/pixi-filters-tools.js"></script>
+	<script src="pixi-renderers/runtimegame-pixi-renderer.js"></script>
+	<script src="pixi-renderers/runtimescene-pixi-renderer.js"></script>
+	<script src="pixi-renderers/layer-pixi-renderer.js"></script>
+	<script src="pixi-renderers/pixi-image-manager.js"></script>
+	<script src="pixi-renderers/spriteruntimeobject-pixi-renderer.js"></script>
+	<script src="pixi-renderers/loadingscreen-pixi-renderer.js"></script>
+	<script src="howler-sound-manager/howler.min.js"></script>
+	<script src="howler-sound-manager/howler-sound-manager.js"></script>
+	<script src="fontfaceobserver-font-manager/fontfaceobserver.js"></script>
+	<script src="fontfaceobserver-font-manager/fontfaceobserver-font-manager.js"></script>
+	<script src="data.js"></script>
 
-  <title>ASES | Global Entrepreneurship at Stanford</title>
-  <meta name="description" content="ASES is a global entrepreneurship group at Stanford University.">
-  <meta name="author" content="">
+	<script type="text/javascript">
+		var onDeviceReady=function(){
+	        //Initialization
+			if (typeof navigator !== "undefined" && navigator.splashscreen && navigator.splashscreen.hide)
+				navigator.splashscreen.hide();
 
-  <meta property="og:title" content="ASES Stanford">
-  <meta property="og:description" content="Solving global problems.">
-  <meta property="og:image" content="http://ases.stanford.edu/thumbnail.jpg">
-  <meta property="og:url" content="http://ases.stanford.edu">
+				//Initialization
+				gdjs.registerObjects();
+				gdjs.registerBehaviors();
+				gdjs.registerGlobalCallbacks();
 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/title/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/title/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/title/favicon-16x16.png">
-  <link rel="manifest" href="images/title/site.webmanifest">
-  <link rel="mask-icon" href="images/title/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="images/title/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="images/title/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
+				var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/lib/owl.carousel.css">
-  <link rel="stylesheet" href="css/lib/owl.theme.css">
-  <link rel="stylesheet" href="css/lib/owl.transitions.css">
+				//Create a renderer
+				var canvasArea = document.getElementById("canvasArea");
+				game.getRenderer().createStandardCanvas(canvasArea);
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+				//Bind keyboards/mouse/touch events
+				game.getRenderer().bindStandardEvents(game.getInputManager(), window, document);
+
+				//Load all assets and start the game
+				game.loadAllAssets(function() {
+						game.startGameLoop();
+				});
+		};
+		document.addEventListener("deviceready", onDeviceReady, false);
+	</script>
 </head>
-
 <body>
-  <div id="loading">
-    <img src="images/logo.png" alt="loading" />
-  </div>
+    <div id="canvasArea"></div>
 
-  <section id="global-nav">
-    <div>
-      <header>
-        <a class="logo" href="#landing">ASES</a>
-        <nav>
-          <ul>
-            <li><a class="hamburger" href="#">
-              <img src="images/hamburger_icon.png" alt="nav"/>
-            </a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <nav>
-        <ul>
-          <li>
-            <a href="http://ases.stanford.edu" target="_blank">Home.</a>
-          </li>
-          <li>
-            <b><a href="http://ases.stanford.edu/summit" target="_blank">Summit.</a></b>
-          </li>
-          <li>
-            <a href="http://ases.stanford.edu/vc3" target="_blank">VC3.</a>
-          </li>
-          <li>
-            <a href="http://ases.stanford.edu/launchpad" target="_blank">Launchpad.</a>
-          </li>
-          <li>
-            <a href="http://ases.stanford.edu/team" target="_blank">Team.</a>
-          </li>
-          <li>
-            <a href="mailto:ases.stanford1998@gmail.com" target="_blank">Contact.</a>
-          </li>
-          <li>
-            <a href="http://ases.stanford.edu/sponsors" target="_blank">Sponsors.</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <section id="landing">
-    <div>
-      <header>
-        <a class="logo" href="#landing">ASES</a>
-        <nav>
-          <ul>
-            <li><a href="#history">About</a></li>
-            <li><a href="#list">Programs</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="http://ases.stanford.edu/team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="http://ases.stanford.edu/sponsors">Sponsors</a></li>
-            <!-- <li><a href="https://stanfordases.typeform.com/to/sZEnkW" target="_blank">Apply</a></li> -->
-            <li><a class="hamburger" href="#">
-              <img src="images/hamburger_icon.png" alt="nav"/>
-            </a></li>
-          </ul>
-        </nav>
-      </header>
-
-    <!--  <h2>Solve the <br />
-      <span class="strike">Silicon</span><span class="strike"> Valley's</span><br />
-      Globe's Problems.</h2>-->
-      <h2>Stanford's Globally Focused Student Entrepreneurship Society</h2>
-      <a href="#list" class="btn">Looking for Bootcamp?</a>
-
-      <div class="speaker-container">
-        <a href="#" class="speaker mute">
-          <span></span>
-        </a>
-      </div>
-
-      <video autoplay muted loop id="video-background">
-        <source src="./images/hero-video.mp4" type="video/mp4">
-      </video>
-
-      <!-- testing<a href="https://stanfordases.typeform.com/to/sZEnkW" target="_blank" class="btn">Apply</a> -->
-
-      <!-- <h5>Join us. Let's get to work.</h5> -->
-      <!-- Begin MailChimp Signup Form -->
-      <!-- <div id="mc_embed_signup">
-      <form action="http://stanford.us8.list-manage.com/subscribe/post?u=9356d6977299a28284ef01925&amp;id=a60eafbb8d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-
-      <div class="mc-field-group">
-      	<input placeholder="Email Address" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-      </div>
-      	<div id="mce-responses" class="clear">
-      		<div class="response" id="mce-error-response" style="display:none"></div>
-      		<div class="response" id="mce-success-response" style="display:none"></div>
-      	</div>
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_9356d6977299a28284ef01925_a60eafbb8d" tabindex="-1" value=""></div>
-          <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </div>
-      </form>
-      </div> -->
-
-      <!--End mc_embed_signup-->
-    </div>
-  </section>
-
-  <section id="history">
-    <div>
-      <header class="centered">
-        <h4 class="strike-through"><span>Since</span></h4>
-        <h1>1998</h1>
-      </header>
-
-      <p class="centered">
-ASES was founded at Stanford University in 1998 with the goal of connecting student entrepreneurs all over the world. Today, active ASES chapters provide educational programs on entrepreneurship, design, and venture capital for students across the globe. We challenge our members to think beyond Silicon Valley and solve global problems.      </p>
-    </div>
-  </section>
-
-  <section id="community">
-<!--     <div class="grid">
-      <div class="grid__col col--4-of-10">
-        <h2>Building a community.</h2>
-        <p>Our community is what makes us. We pride ourselves in being a smaller club; this means we're lean and efficient allowing us to spend less time in meetings and more time learning, solving hard problems, and having fun together.</p>
-      </div>
-      <div class="video grid__col col--6-of-10">
-        <iframe src="https://player.vimeo.com/video/105448147" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-
-    </div> -->
-
-    <article id="owl-article">
-      <div id="owl">
-        <div class="column row">
-          <div class="grid__col col--1-of-2 testimonial">
-            <div class="quote">
-              <p>Joining ASES Bootcamp my freshman year was definitely one of my most fulfilling Stanford experiences in both a social and entrepreneurial context. My experiences so far have ranged from prototyping and scaling a startup idea to planning conferences and meeting international ASES members from all over the world. Most importantly, I’ve met some of my best friends through the organization. It allowed me not only to explore what it means to be an entrepreneur outside of just Silicon Valley, but become a part of a close-knit community here at Stanford and with ASES chapters globally.</p>
-            </div>
-            <div class="student">
-              <div class="photo"><img class="round-image" src='images/profile_pics/hayley_tran.jpg'/></div>
-              <p>Haley Tran</p>
-              <p>Class of 2021</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="grid__col col--1-of-2 testimonial">
-            <div class="quote">
-              <p>I joined ASES my freshman year and I immediately felt at home with the welcoming community. It was easy to talk to everyone and I made tight-knit friends both in and outside of bootcamp at quarterly retreats and team events. I developed not only personally, but also professionally and was able to learn valuable entrepreneurial skills and apply them to real-world experiences. ASES helped me find me internships and new opportunities, and connected me with mentors in areas I was interested in.</p>
-            </div>
-            <div class="student">
-              <div class="photo"><img class="round-image" src='images/profile_pics/alex_lin.jpg'/></div>
-              <p>Alex Lin</p>
-              <p>Class of 2021</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="grid__col col--1-of-2 testimonial">
-            <div class="quote">
-              <p>Joining ASES through the Bootcamp program my frosh fall was one of the most important decisions I’ve made during my time at Stanford. Not only did I learn an incredible amount from knowing nearly nothing about entrepreneurship, I was sucked into a community of amazing people that extends around the world. I absolutely love my friends (family!) in ASES, and I know that together we have the ability to solve the world’s problems while having a crazy amount of fun.
-            </div>
-            <div class="student">
-              <div class="photo"><img class="round-image" src='images/profile_pics/charles_tsao.jpg'/></div>
-              <p>Charles Tsao</p>
-              <p>Class of 2021</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <section id="list">
-    <div>
-      <h2>Quality over Quantity</h2>
-      <p>We focus on providing our members significant value in the forms of learning, networking, and fun. This is only possible because we limit the number of the events we do so we can do them extremely well.</p>
-    </div>
-  </section>
-
-  <section id="bootcamp" class="programs">
-    <div class="grid">
-      <div class="grid__col col--1-of-2">
-        <h2>Bootcamp<span class="normal"> - Solve<br />Wicked Problems.</span></h2>
-        <p>
-          ASES Bootcamp is a 12-week design-thinking intensive for Stanford freshmen and sophomores that serves as a stepping stone into the world of entrepreneurship. Following an innovative, action-oriented process, students will learn to identify and prototype impactful solutions to problems they’re interested in tackling. Bootcamp culminates in a final pitch presentation, in which teams of students pitch their startup ideas to a panel of Silicon Valley investors. This is your chance to join Stanford’s closest-knit startup community, apply now!
-        </p>
-      <!--  <a href="https://asesstanford.typeform.com/to/AmQAlJ" target="_blank" class="btn">Apply Now</a> !-->
-      </div>
-      <div class="grid__col col--1-of-2 desktop">
-        <div class="grid activity teams">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            Form Teams
-          </div>
-        </div>
-        <div class="grid activity problems">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            Solve a Problem
-          </div>
-        </div>
-        <div class="grid activity presentation">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            Pitch to VCs
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="summit" class="programs" id="">
-    <div class="grid">
-      <div class="grid__col col--1-of-2">
-        <h2>Summit<span class="normal"> - Connecting Global Entrepreneurs.</span></h2>
-        <p>Every year we select 35 of the world's best collegiate entrepreneurs to come to Stanford and participate in a week of entrepreneurship, design, incredible guest speakers, and wicked problem solving. Summit is great for the delegates and even better for ASES members who get to expand their networks globally and gain first-hand exposure to global problems and ways of thinking.</p>
-
-        <a href="http://ases.stanford.edu/summit" target="_blank" class="btn">Learn More</a>
-      </div>
-      <div class="grid__col col--1-of-2 desktop">
-        <div class="grid activity calendar">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            One Week of Global<br />Entrepreneurship
-          </div>
-        </div>
-        <div class="grid activity group">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            35 Collegiate<br />Entrepreneurs
-          </div>
-        </div>
-        <div class="grid activity location">
-          <div class="icon grid__col col--1-of-4">
-          </div>
-          <div class="grid__col col--3-of-4">
-            Stanford University
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="bfw" class="programs" id="">
-    <div class="grid">
-      <div class="grid__col description col--1-of-2">
-        <h2>Launchpad<span class="normal"> - Enabling Local High Schoolers.</span></h2>
-        <p>We've all been high schoolers at one point so we know that high schoolers have great ideas! Launchpad is all about enabling these students to turn their ideas into realities, whether they be simple websites advances mobile apps, or fast growing businesses.</p>
-
-        <a href="http://ases.stanford.edu/launchpad/" target="_blank" class="btn">Learn More</a>
-      </div>
-      <div class="grid__col col--1-of-2 map">
-      </div>
-    </div>
-  </section>
-
-  <section id="vc3" class="programs" id="">
-    <div class="grid">
-      <div class="description grid__col col--1-of-2">
-        <h2>VC3<span class="normal"> - Educating Student Founders.</span></h2>
-        <p>ASES' mission is to solve global problems. We accomplish this through great educational programs like Bootcamp and also by providing problem solvers with incredible resources. With VC3, we connect Stanford’s most promising startups with prominent venture capitalists through a rapid-fire pitch event to help student founders refine their pitches and receive feedback from successful investors.</p>
-
-        <a href="http://ases.stanford.edu/vc3" class="btn">Learn More</a>
-      </div>
-      <div class="logos grid__col col--1-of-2">
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div>
-      <h2>Frequently Asked Questions</h2>
-
-      <article>
-        <div class="question">
-          How are you guys different from other entrepreneurship organizations on campus?
-        </div>
-        <div class="answer">
-          As a globally-focused student organization, we’re part of a network of student entrepreneurship societies at universities around the world. With this global perspective, we focus on solving the world's problems, not just Silicon Valley's. There is a plethora of  exciting apps and services centered here in the Valley, but we challenge our members to solve the hardest and most painful problems that billions of people around the world experience instead of focusing on reinventing something that already exists.
-        </div>
-      </article>
-      <article>
-        <div class="question">
-          What will I get out of ASES?
-        </div>
-        <div class="answer">
-          We get it, you have 4 years at Stanford before you have to enter the "real world" and you want to grow as much as you can. At ASES, personal development and community are core to us. We pride ourselves in giving every member opportunities to grow and have a real impact in the organization. In terms of personal development, we provide our members with great educational programs focused on entrepreneurship, design, and venture capital in addition to a powerful global network of students, alumni, sponsors, and other partners. The ASES community is one of the tightest-knit you’ll find on campus. We’re friends outside the work that we do and our leadership team invests significant time in getting to know new members. 
-        </div>
-      </article>
-      <article>
-        <div class="question">
-          What does ASES stand for?
-        </div>
-        <div class="answer">
-          ASES is a global entrepreneurship community. With chapters all around the globe, we strive to to be a diverse, inclusive group with a keen eye for innovation.
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="grid">
-      <div class="grid__col col--1-of-2">
-          <h2>Contact Us</h2>
-          <p>Wanna chat? Hit us up and we'll get back to you soon! Have an attachement or just prefer to email us? No problem, we're at ases.stanford1989@gmail.com</p>
-
-          <form action="https://formaholic.com/f/9d34d0d7196bddca" method="POST">
-            <input type="text" name="_gotcha" style="display:none">
-            <div class="field grid">
-              <div class="grid__col col--1-of-2">
-                <input name="name" type="text" placeholder="Your Name" />
-              </div>
-              <div class="grid__col col--1-of-2">
-                <input name="email" required="true" type="text" placeholder="Email Address" />
-              </div>
-            </div>
-            <div class="field grid">
-              <div class="grid__col col--3-of-3">
-                <input name="subject" type="text" placeholder="Subject" />
-              </div>
-            </div>
-            <div class="field grid">
-              <div class="grid__col col--3-of-3">
-                <input name="message" type="text" placeholder="Message" />
-              </div>
-            </div>
-
-            <input class="btn" type="submit" value="Submit" />
-          </form>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <img src="images/logo.png" />
-    <p>Solve global problems.</p>
-    <div class="grid">
-      <div class="grid__col col--7-of-10">
-        &copy; ASES <script type="text/javascript">document.write(new Date().getFullYear());</script>. All rights reserved.
-      </div>
-      <div class="icon email grid__col col--1-of-10">
-        <a href="mailto:ases.stanford1989@gmail.com"></a>
-      </div>
-      <div class="icon twitter grid__col col--1-of-10">
-        <a href="https://twitter.com/ASESStanford"></a>
-      </div>
-      <div class="icon facebook grid__col col--1-of-10">
-        <a href="https://www.facebook.com/ASESStanford?fref=ts"></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/lib/owl.carousel.min.js"></script>
+    
 </body>
 </html>
