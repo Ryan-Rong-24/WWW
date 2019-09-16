@@ -516,19 +516,18 @@ h5 {
     width: 60px; }
 
 .btn {
-  background: #CB6A79;
-  border-radius: 1.5em;
-  -webkit-box-shadow: 0px 0px 34px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 34px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 34px -9px rgba(0, 0, 0, 0.75);
-  color: #fff;
   display: inline-block;
   font-weight: 600;
-  letter-spacing: .15em;
-  line-height: 2em;
-  margin-top: 1em;
-  padding: 0.15em 4em;
+  letter-spacing: .2em;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase; }
+  .btn.bg.accent {
+  background: #CB6A79;
+  color: #fff; }
+  .btn.round {
+  border-radius: 1.25em;
+  padding: 0.5em 2em 0.3em; }
 
 /* Basic jQuery Slider essential styles */
 ul.bjqs {
