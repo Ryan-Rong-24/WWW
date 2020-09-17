@@ -14,4 +14,4 @@ Current members may add new users to this group by running the command `pts addu
 
 You can check for current membership by running `pts membership ases-admins`. 
 
-In the case that the previous ASES team neglected to add you to the pts group properly, please submit a ticket to Stanford ServiceNow with the ticket type 'GET ACCESS TO EDIT EXISTING WEBSITE'.
+In the case that the previous ASES team neglected to add you to the pts group, please submit a ticket to Stanford ServiceNow with the ticket type 'GET ACCESS TO EDIT EXISTING WEBSITE'.
