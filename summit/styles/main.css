@@ -877,7 +877,7 @@ section {
 .position {
   position: absolute; }
   .position.lower.right {
-    bottom: 1.5em;
+    bottom: 1em;
     right: 1.5em; }
   .position.lower.right.secondary {
     bottom: 4.5em;
