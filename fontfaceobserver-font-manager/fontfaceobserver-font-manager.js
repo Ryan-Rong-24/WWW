@@ -9,7 +9,7 @@
  * from the game resources (see `loadFonts`), and allow to access to
  * the font families of the loaded fonts during the game (see `getFontFamily`).
  * 
- * @font-face declarations must be have been added separately in the index.html
+ * @font-face declarations must be have been added separately in the index_placeholder.html
  * (or any CSS file).
  *
  * @class FontFaceObserverFontManager
