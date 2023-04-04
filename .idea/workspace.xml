@@ -3,46 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c3598648-61ce-459d-98d1-b1ea6bbd769e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Akshaya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/AlexPeak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Alexander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Andrew.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Anwesha.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Arshia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Bennett.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Brandon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/members/Brandon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Cynthia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/EdwardTran.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Em.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/EmilyYuan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Enya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Ethan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Gabby.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Harshal.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/JackYuan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/JakeChao.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/JamesZheng.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Jason.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Jessica.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Karuna.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Kimberly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Louise.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Melanie.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/MichelleGan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Nathan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Nikhil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Picture1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Roberta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Rushil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Serena.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Simon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/Sophie.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/TrinityD.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/niral.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/members/rahul.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/summit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/summit/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/team/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +217,14 @@
       <workItem from="1648544016185" duration="2604000" />
       <workItem from="1649218943091" duration="17000" />
       <workItem from="1649244151545" duration="2000" />
-      <workItem from="1664175316105" duration="3817000" />
+      <workItem from="1664175316105" duration="4800000" />
+      <workItem from="1664398886509" duration="63000" />
+      <workItem from="1664775537232" duration="1093000" />
+      <workItem from="1667184172596" duration="3205000" />
+      <workItem from="1669523139516" duration="1218000" />
+      <workItem from="1669900117584" duration="4290000" />
+      <workItem from="1674005694901" duration="1537000" />
+      <workItem from="1679864594143" duration="213000" />
     </task>
     <servers />
   </component>
@@ -290,6 +257,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/team/index.html">
