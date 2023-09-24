@@ -1470,8 +1470,9 @@ article#owl-article {
 }
 
 .member-grid {
-  position: relative;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2;
 }
 
 .member {
