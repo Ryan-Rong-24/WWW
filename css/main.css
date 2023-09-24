@@ -1493,7 +1493,7 @@ article#owl-article {
 }
 
 .member .img-container img {
-  width: 400px;
+  width: 100%;
 }
 
 @media screen and (min-width: 580px) {
