@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+html, body {
+    height: 100%;
+    font-family: "Helvetica Neue Thin", "Helvetica Neue";
+    font-weight: 200; 
+    margin: 0;
+}
+
+nav ul {
+    display: block;
+    float: right;
+}
+
+nav li {
+    font-family: "Montserrat";
+    font-size: 1.7em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 4.7em;
+    list-style-type: none;
+    color: white;
+    float: left;
+}
+
+#team-nav li {
+    color: gray;
+}
+
+#main {
+    background: url("./images/main.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+
+#title {
+    /* take up full width possible */
+    display: block;
+    letter-spacing: 0.2em;
+    font-size: 3.5em;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 3.5em;
+    clear: both;
+}
+
+#caption {
+    display: block;
+    font-family: "Serif";
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: white;
+    font-size: 2em;
+    position: relative;
+    top: 7em;
+    text-align: right;
+    right: 10.0em;
+    clear: both;
+}
+
+#date {
+    display: block;
+    text-align: center;
+    font-family: "Open Sans";
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: relative;
+    top: 10.5em;
+}
+
+button {
+    font-family: "Helvetica Neue Thin", "Helvetica Neue";
+    font-weight: 200;
+    font-size: 2.3em;
+    letter-spacing: 0.2em;
+    border-radius: 7px;
+    background-color: transparent;
+    position: relative;
+    top: 9em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-color: white;
+    border-style: double;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#about {
+    font-family: 'Open Sans';
+}
+
+#what-is-sia {
+    font-family: 'Montserrat';
+    color: #ff5a5a;
+    font-weight: 700;
+    position: relative;
+    top: 1.5em;
+    display: block;
+    text-align: center;
+    font-size: 4em;
+}
+
+#about p {
+    position: relative;
+    top: 7em;
+    padding-left: 12em;
+    padding-right: 12em;
+    margin-bottom: 7em;
+}
+
+#schedule {
+    background-image: url('images/schedule-background.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+    top: 5em;
+}
+
+#schedule h1 {
+    position: relative;
+    top: 0.6em;
+    text-align: center;
+    font-size: 4em;
+}
+
+.column {
+    vertical-align: top;
+    line-height: 2em;
+    text-align: center;
+    width: 49%;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    clear: both;
+    margin-bottom: 9em;
+}
+
+.day-header {
+    font-family: 'Montserrat';
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+.time {
+    color: pink;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.description {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+#meet {
+    clear: both;
+    float: right;
+    width: 5em;
+    text-align: right;
+    color: gray;
+    font-family: 'Montserrat';
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    line-height: 2em;
+    position: relative;
+    right: 1em;
+}
+
+.member {
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    background-size: 100% 100%;
+    color: white;
+    font-size: 2em;
+    margin-top: 0.2em;
+}
+
+/* Team Member photos */
+
+#david {
+    background-image: url('./images/david.png');
+}
+#calvin {
+    background-image: url('./images/calvin.png');
+}
+#laura {
+    background-image: url('./images/laura.png');
+}
+#angela {
+    background-image: url('./images/angela.png');
+}
+#ashwin {
+    background-image: url('./images/ashwin.png');
+}
+#anna {
+    background-image: url('./images/anna.png');
+}
+#annie {
+    background-image: url('./images/annie.png');
+}
