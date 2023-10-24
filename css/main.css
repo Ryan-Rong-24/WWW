@@ -1470,8 +1470,10 @@ article#owl-article {
 }
 
 .member-grid {
-  position: relative;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 2;
 }
 
 .member {
@@ -1492,8 +1494,7 @@ article#owl-article {
 }
 
 .member .img-container img {
-  width: 400px;
-  margin-left: -90px;
+  width: 100%;
 }
 
 @media screen and (min-width: 580px) {
