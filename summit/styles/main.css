@@ -521,13 +521,17 @@ h5 {
   letter-spacing: .2em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase; }
-  .btn.bg.accent {
+  text-transform: uppercase; 
+}
+
+.btn.bg.accent {
   background: #CB6A79;
-  color: #fff; }
+  color: #fff; 
+}
   .btn.round {
-  border-radius: 1.25em;
-  padding: 0.5em 2em 0.3em; }
+    border-radius: 1.25em;
+    padding: 0.5em 2em 0.3em; 
+  }
   .btn.roundBigger {
     border-radius: 2em;
     text-align: center;
@@ -946,8 +950,7 @@ footer {
     padding-top: 2em;
     width: 40em; }
     #homepage #home .container .btn {
-      margin: 4em auto 0;
-      width: 10em; }
+      margin: 4em auto 0;}
     #homepage #home .container h2 {
       border-bottom: 2px solid #fff;
       font-size: 2.25em;
@@ -1505,3 +1508,9 @@ footer {
         margin-top: 0; }
         #homepage #details section .container .deadline-details .deadline-detail {
           padding-top: 2em; } }
+
+.video-player {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
