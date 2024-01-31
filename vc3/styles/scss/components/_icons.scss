@@ -1,0 +1,25 @@
+.icon {
+	height: 3em; 
+	width: 3em; 
+	display: block; 
+	margin: 1.75em auto .25em;
+	text-indent: -99999999px;
+
+	&#email {
+		background: url('../images/icon_email.png') no-repeat; 
+		background-size: cover; 
+		background-position: center center;	
+	}
+
+	&#twitter {
+		background: url('../images/icon_twitter.png') no-repeat; 
+		background-size: cover; 
+		background-position: center center;	
+	}
+
+	&#facebook {
+		background: url('../images/icon_facebook.png') no-repeat; 
+		background-size: cover; 
+		background-position: center center;	
+	}
+}

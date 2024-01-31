@@ -1,4 +1,0 @@
-AuthType WebAuth
-<Files eweekapp.html>
-Require valid-user
-</Files>

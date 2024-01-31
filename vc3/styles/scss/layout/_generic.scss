@@ -1,0 +1,113 @@
+a { 
+  img {
+    border: 0; 
+  }
+}
+
+aside {
+  background: $primary;
+  color: $white; 
+  padding: 5em 0 4em;
+
+  .container {
+    margin: 0 auto; 
+    max-width: 90%; 
+    text-align: center;
+
+    &.content {
+      line-height: 2em;
+      width: 500px;
+    }
+  }
+}
+
+.align {
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+}
+
+section {
+  display: table;
+  width: 100%;
+  &.full-height {
+    min-height: 100vh;
+    height: 100vh;
+  }
+  & > section {
+    display: table-cell;
+    margin: 0 auto;
+    vertical-align: middle;
+    .container {
+      margin: 0 auto; 
+  
+      &.header {
+        font-weight: 600;
+        margin-bottom: 3em;
+        width: 400px; 
+
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.3);
+}
+
+.centered {
+  display: block; 
+  margin: 0 auto; 
+}
+
+.bg {
+  &.asphalt {
+    background-image: url('../images/bg_asphalt.png');
+    background-size: cover; 
+    background-position: center center;
+  }
+}
+
+.emphasis {
+  background: $primary; 
+  color: $white;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 3em;
+  margin-bottom: .3em;
+  padding: .5em;
+  &.primary {
+    background: $primary;
+    color: $white; 
+  }
+  &.accent {
+    background: $accent; 
+    color: $white;
+  }
+  &.centered {
+    display: table;
+  }
+}
+
+.color {
+  &.black {
+    color: $black;
+  }
+  &.primary {
+    color: $primary;
+  }
+  &.accent {
+    color: $accent;
+  }
+  &.accent-2 {
+    color: $accent-2;
+  }
+}

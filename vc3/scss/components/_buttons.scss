@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.bg {
+    &.accent {
+      background: $accent;
+      color: $white;
+    }
+    &.primary {
+      background: $primary;
+      color: $white;
+    }
+    &.white {
+      background: $white; 
+      color: $accent;
+    }
+  }
+  &.round {
+    border-radius: 1.25em;
+    padding: .5em 2em .3em;
+  }
+}
