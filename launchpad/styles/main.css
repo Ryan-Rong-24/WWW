@@ -691,6 +691,9 @@ section {
   section.full-height {
     min-height: 100vh;
     height: 100vh; }
+    section.partial-height {
+      min-height: 50vh;
+      height: 50vh; }
   section > section {
     display: table-cell;
     margin: 0 auto;
@@ -758,7 +761,7 @@ header nav {
       padding: 0;
       text-align: center; }
       header nav ul li a {
-        color: #1C1A50;
+        color: #fff; /*1C1A50*/
         font-weight: 600;
         line-height: 2em;
         text-decoration: none; }
@@ -773,8 +776,8 @@ header nav {
   padding-top: 2em;
   width: 80%; }
 #homepage #home {
-  background: url("../images/bg_home.png") no-repeat;
-  background-size: contain;
+  background: url("../images/bg_home_2023.png") no-repeat;
+  background-size: cover;
   background-position: top center; }
   #homepage #home header {
     padding: 2em 3em;
@@ -816,26 +819,26 @@ header nav {
     width: 13em; }
 #homepage #entrepreneurship {
   background: url("../images/bg_entrepreneurship.png") no-repeat;
-  background-position: 80% center;
-  background-size: 15%; }
+  background-position: 85% center;
+  background-size: 10%; }
   #homepage #entrepreneurship p {
     width: 50%; }
 #homepage #design {
   background: url("../images/bg_design.png") no-repeat;
   background-position: 90% center;
-  background-size: 40%; }
+  background-size: 20%; }
   #homepage #design p {
     width: 50%; }
 #homepage #programming {
   background: url("../images/bg_programming.png") no-repeat;
   background-position: 90% center;
-  background-size: 40%; }
+  background-size: 20%; }
   #homepage #programming p {
     width: 50%; }
 #homepage #marketing {
   background: url("../images/bg_marketing.png") no-repeat;
   background-position: 90% center;
-  background-size: 40%; }
+  background-size: 20%; }
   #homepage #marketing p {
     width: 50%; }
 #homepage #closing {
@@ -1008,5 +1011,46 @@ header nav {
         margin-top: 0; }
         #homepage #details section .container .deadline-details .deadline-detail {
           padding-top: 2em; } }
+
+          #faq {
+            background: #FFF;
+            background-size: cover;
+            background-position: center top;
+            min-height: auto;
+            padding-left: 20%;
+            padding-right: 20% }
+            #faq h2 {
+              color: #233F71; }
+            #faq article {
+              border-bottom: 1px solid #d6d6d6; }
+              #faq article .question, #faq article .answer {
+                position: relative; }
+                #faq article .question:before, #faq article .answer:before {
+                  font-weight: 600;
+                  position: absolute; }
+              #faq article .question {
+                font-size: 1.15em;
+                font-weight: 600;
+                margin: 2em 0 1em 2em;
+                padding-left: 1.5em; }
+                #faq article .question:before {
+                  content: 'Q:';
+                  color: #233F71;
+                  font-size: 2em;
+                  position: absolute;
+                  top: 3px;
+                  left: -1em; }
+              #faq article .answer {
+                font-size: .9em;
+                font-weight: 200;
+                margin: 0 0 2em 2.5em;
+                padding-left: 2.1em; }
+                #faq article .answer:before {
+                  content: 'A:';
+                  color: #233F71;
+                  font-size: 2.7em;
+                  top: 11px;
+                  left: -.95em; }
+
 
 /*# sourceMappingURL=main.css.map */
